@@ -12,7 +12,7 @@
 <hr>
 
 # Demo App
-<a href="https://github.com/aminsamad/flutter_kurdish_localization/blob/main/app-release.apk?raw=true" target="_blank"><img src="https://github.com/aminsamad/flutter_kurdish_localization/blob/main/pic/download_button.png" style="width: 200px; height: 50px;" /></a>
+<a href="https://github.com/aminsamad/flutter_kurdish_localization/blob/main/app-release(1).apk?raw=true" target="_blank"><img src="https://github.com/aminsamad/flutter_kurdish_localization/blob/main/pic/download_button.png" style="width: 200px; height: 50px;" /></a>
 
 # Flutter Kurdish Localization 🌍
 

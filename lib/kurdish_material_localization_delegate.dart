@@ -351,6 +351,180 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
 
   @override
   String get lastPageTooltip => 'دوایین لاپه‌ڕه‌';
+
+  @override
+  String get keyboardKeyAlt => "ئاڵت";
+
+  @override
+  String get keyboardKeyAltGraph => "AltGr";
+
+  @override
+  String get keyboardKeyBackspace => "باکسپەیس";
+
+  @override
+  String get keyboardKeyCapsLock => "کاپس لۆک";
+
+  @override
+  String get keyboardKeyChannelDown => "کەناڵ داون";
+
+  @override
+  String get keyboardKeyChannelUp => "کەناڵی ئەپ";
+
+  @override
+  String get keyboardKeyControl => "Ctrl";
+
+  @override
+  String get keyboardKeyDelete => "دێل";
+
+  @override
+  String get keyboardKeyEisu => "عیسۆ";
+
+  @override
+  String get keyboardKeyEject => "دەرکردن";
+
+  @override
+  String get keyboardKeyEnd => "کۆتایی";
+
+  @override
+  String get keyboardKeyEscape => "Esc";
+
+  @override
+  String get keyboardKeyFn => "Fn";
+
+  @override
+  String get keyboardKeyHangulMode => "دۆخی هەنگول";
+
+  @override
+  String get keyboardKeyHanjaMode => "دۆخی هانجا";
+
+  @override
+  String get keyboardKeyHankaku => "هانکاکو";
+
+  @override
+  String get keyboardKeyHiragana => "هیراگانا";
+
+  @override
+  String get keyboardKeyHiraganaKatakana => "هیراگانا کاتاکانا";
+
+  @override
+  String get keyboardKeyHome => "ماڵەوە";
+
+  @override
+  String get keyboardKeyInsert => "تێکردن";
+
+  @override
+  String get keyboardKeyKanaMode => "دۆخی کانا";
+
+  @override
+  String get keyboardKeyKanjiMode => "دۆخی کانجی";
+
+  @override
+  String get keyboardKeyKatakana => "کاتاکانا";
+
+  @override
+  String get keyboardKeyMeta => "مێتا";
+
+  @override
+  String get keyboardKeyMetaMacOs => "فەرمان";
+
+  @override
+  String get keyboardKeyMetaWindows => "بردنەوە";
+
+  @override
+  String get keyboardKeyNumLock => "نوم لۆک";
+
+  @override
+  String get keyboardKeyNumpad0 => "ژمارە 1";
+
+  @override
+  String get keyboardKeyNumpad1 => "ژمارە 2";
+
+  @override
+  String get keyboardKeyNumpad2 => "ژمارە 3";
+
+  @override
+  String get keyboardKeyNumpad3 => "ژمارە 4";
+
+  @override
+  String get keyboardKeyNumpad4 => "ژمارە 5";
+
+  @override
+  String get keyboardKeyNumpad5 => "ژمارە 6";
+
+  @override
+  String get keyboardKeyNumpad6 => "ژمارە 7";
+
+  @override
+  String get keyboardKeyNumpad7 => "ژمارە 8";
+
+  @override
+  String get keyboardKeyNumpad8 => "ژمارە 9";
+
+  @override
+  String get keyboardKeyNumpad9 => "ژمارە 0";
+
+  @override
+  String get keyboardKeyNumpadAdd => "ژمارە +";
+
+  @override
+  String get keyboardKeyNumpadComma => "ژمارە ,";
+
+  @override
+  String get keyboardKeyNumpadDecimal => "ژمارە .";
+
+  @override
+  String get keyboardKeyNumpadDivide => "ژمارە /";
+
+  @override
+  String get keyboardKeyNumpadEnter => "ژمارە داخڵ بکە";
+
+  @override
+  String get keyboardKeyNumpadEqual => "ژمارە =";
+
+  @override
+  String get keyboardKeyNumpadMultiply => "ژمارە *";
+
+  @override
+  String get keyboardKeyNumpadParenLeft => "ژمارە (";
+
+  @override
+  String get keyboardKeyNumpadParenRight => "ژمارە )";
+
+  @override
+  String get keyboardKeyNumpadSubtract => "ژمارە -";
+
+  @override
+  String get keyboardKeyPageDown => "PgDown";
+
+  @override
+  String get keyboardKeyPageUp => "PgUp";
+
+  @override
+  String get keyboardKeyPower => "هێز";
+
+  @override
+  String get keyboardKeyPowerOff => "كوژاندنەوە";
+
+  @override
+  String get keyboardKeyPrintScreen => "شاشەی چاپکردن";
+
+  @override
+  String get keyboardKeyRomaji => "ڕۆماجی";
+
+  @override
+  String get keyboardKeyScrollLock => "سکڕۆڵ لۆک";
+
+  @override
+  String get keyboardKeySelect => "دەسنیاشنکردن";
+
+  @override
+  String get keyboardKeySpace => "مەودا";
+
+  @override
+  String get keyboardKeyZenkaku => "زێنکاکو";
+
+  @override
+  String get keyboardKeyZenkakuHankaku => "زێنکاکو هانکاکو";
 }
 
 const ckbDateSymbols = {

@@ -1,0 +1,22 @@
+{
+    "select_language": "اختار اللغة",
+    "ok_button": "موافق",
+    "desc": "توطين اللغة الكردية المركزية بخطوات سهلة وطرق بسيطة لتعريب وترجمة تطبيقك إلى اللغة الكردية المركزية.",
+    "home_page": "الصفحة الرئيسية",
+    "name": "اسم",
+    "name_hint": "أدخل أسمك",
+    "email": "البريد الإلكتروني",
+    "email_hint": "أدخل بريدك الالكتروني",
+    "date_of_birth": "تاريخ الولادة",
+    "required_field": "يتطلب حقلا",
+    "submit_info": "إرسال معلومات",
+    "settings": "الإعدادات",
+    "change_language": "تغيير اللغة",
+    "pick_date": "اختر التاريخ",
+    "select_time": "حدد الوقت",
+    "time": "الوقت",
+    "rm_shared": "إزالة (Shared Preferences من الشاشة Landing)",
+    "delete": "حذف",
+    "deleted": "تم الحذف"
+
+}

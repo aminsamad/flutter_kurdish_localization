@@ -20,3 +20,6 @@
 
 ## 0.0.8
 * change ckb to ku
+
+## 0.0.9
+* Adding new words

@@ -1,4 +1,4 @@
-<p align="center"><img width=12.5% src="https://github.com/aminsamad/flutter_kurdish_localization/raw/main/pic/ku.png"></p>
+<p align="center"><img width=12.5% src="https://raw.githubusercontent.com/aminsamad/flutter_kurdish_localization/master/pic/ku.png"></p>
 <p align="center"><img width=60% src="https://github.com/aminsamad/flutter_kurdish_localization/raw/main/pic/Designer.png"></p>
 
 <hr>

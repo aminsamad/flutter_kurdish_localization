@@ -1,18 +1,18 @@
 <p align="center"><img width=12.5% src="https://raw.githubusercontent.com/aminsamad/flutter_kurdish_localization/master/pic/ku.png"></p>
-<p align="center"><img width=60% src="https://github.com/aminsamad/flutter_kurdish_localization/raw/main/pic/Designer.png"></p>
+<p align="center"><img width=60% src="[https://raw.githubusercontent.com/aminsamad/flutter_kurdish_localization/master/pic/Designer.png"></p>
 
 <hr>
 
-<img src="https://github.com/aminsamad/flutter_kurdish_localization/raw/main/pic/screenshoot_1.png">
+<img src="https://raw.githubusercontent.com/aminsamad/flutter_kurdish_localization/master/pic/screenshoot_1.png">
 
 <hr>
 
-<img src="https://github.com/aminsamad/flutter_kurdish_localization/raw/main/pic/screenshoot_2.png">
+<img src="https://raw.githubusercontent.com/aminsamad/flutter_kurdish_localization/master/pic/screenshoot_2.png">
 
 <hr>
 
 # Demo App
-<a href="https://github.com/aminsamad/flutter_kurdish_localization/blob/main/app-release(1).apk?raw=true" target="_blank"><img src="https://github.com/aminsamad/flutter_kurdish_localization/raw/main/pic/download_button.png" style="width: 200px; height: 50px;" /></a>
+<a href="https://github.com/aminsamad/flutter_kurdish_localization/blob/master/app-release(1).apk?raw=true" target="_blank"><img src="https://raw.githubusercontent.com/aminsamad/flutter_kurdish_localization/master/pic/download_button.png" style="width: 200px; height: 50px;" /></a>
 
 # Flutter Kurdish Localization 🌍
 

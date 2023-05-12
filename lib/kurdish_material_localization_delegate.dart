@@ -517,6 +517,26 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
 
   @override
   String get menuBarMenuLabel => throw UnimplementedError();
+
+  @override
+  // TODO: implement bottomSheetLabel
+  String get bottomSheetLabel => throw UnimplementedError();
+
+  @override
+  // TODO: implement currentDateLabel
+  String get currentDateLabel => throw UnimplementedError();
+
+  @override
+  // TODO: implement keyboardKeyShift
+  String get keyboardKeyShift => throw UnimplementedError();
+
+  @override
+  // TODO: implement scrimLabel
+  String get scrimLabel => throw UnimplementedError();
+
+  @override
+  // TODO: implement scrimOnTapHintRaw
+  String get scrimOnTapHintRaw => throw UnimplementedError();
 }
 
 const kuDateSymbols = {

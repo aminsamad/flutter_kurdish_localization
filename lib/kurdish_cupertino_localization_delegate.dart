@@ -344,4 +344,7 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
 
   @override
   String get todayLabel => throw UnimplementedError();
+
+  @override
+  String get noSpellCheckReplacementsLabel => throw UnimplementedError();
 }

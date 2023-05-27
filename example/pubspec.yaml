@@ -1,0 +1,46 @@
+name: flutter_kurdish_localization_example
+description: Demonstrates how to use the flutter_kurdish_localization plugin.
+
+
+publish_to: 'none' 
+
+environment:
+  sdk: ">=2.15.0 <3.0.0"
+
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  flutter_localizations:
+    sdk: flutter  
+ 
+
+  flutter_kurdish_localization:
+    path: ../
+  flutter_feather_icons: ^2.0.0+1
+  fancy_snackbar:
+    git: https://github.com/MR0100/fancy_snackbar.git 
+  shared_preferences: ^2.1.1
+
+
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+
+  flutter_lints: ^1.0.0
+
+
+
+flutter:
+
+  assets:
+    - lib/lang/en.json
+    - lib/lang/ckb.json
+    - lib/lang/ar.json
+    - assets/images/
+    - assets/flags/
+
+
+  uses-material-design: true

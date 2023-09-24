@@ -24,5 +24,24 @@
 ## 0.0.9
 * Adding new words
 
-## 0.0.10
+## 1.0.0
+* Fix Cupertino Localization
+* Update example project
+
+## 1.0.1
+* Change Readme images
+
+## 1.0.2
 * Updating to 3.10.2 Flutter version
+
+## 1.0.3
+* Updating some words
+
+## 1.0.4
+* Updating some words
+
+## 1.0.5
+* Updating some words
+
+## 1.0.6
+* Fixing Issues

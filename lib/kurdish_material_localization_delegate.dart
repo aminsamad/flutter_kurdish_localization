@@ -516,7 +516,10 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get keyboardKeyZenkakuHankaku => throw UnimplementedError();
 
   @override
-  String get bottomSheetLabel => throw UnimplementedError();
+  String get menuBarMenuLabel => throw UnimplementedError();
+
+  @override
+  String get bottomSheetLabel => '';
 
   @override
   String get currentDateLabel => throw UnimplementedError();
@@ -525,13 +528,31 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get keyboardKeyShift => throw UnimplementedError();
 
   @override
-  String get menuBarMenuLabel => throw UnimplementedError();
+  String get scrimLabel => '';
 
   @override
-  String get scrimLabel => throw UnimplementedError();
+  String get scrimOnTapHintRaw => 'null';
 
   @override
-  String get scrimOnTapHintRaw => throw UnimplementedError();
+  String get collapsedHint => '';
+
+  @override
+  String get expandedHint => '';
+
+  @override
+  String get expansionTileCollapsedHint => '';
+
+  @override
+  String get expansionTileCollapsedTapHint => '';
+
+  @override
+  String get expansionTileExpandedHint => '';
+
+  @override
+  String get expansionTileExpandedTapHint => '';
+
+  @override
+  String get scanTextButtonLabel => '';
 }
 
 const kuDateSymbols = {

@@ -45,3 +45,9 @@
 
 ## 1.0.6
 * Fixing Issues
+
+## 1.0.7
+* Fixing Issues
+
+## 1.0.8
+* Fixing Issues

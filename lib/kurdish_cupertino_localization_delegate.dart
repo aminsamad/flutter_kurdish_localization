@@ -6,6 +6,7 @@ import 'package:intl/date_symbol_data_custom.dart' as date_symbol_data_custom;
 import 'package:intl/date_symbols.dart' as intl;
 import 'package:intl/intl.dart' as intl;
 
+
 /// A custom set of date patterns for the `nn` locale.
 ///
 /// These are not accurate and are just a clone of the date patterns for the
@@ -347,4 +348,18 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
 
   @override
   String get noSpellCheckReplacementsLabel => throw UnimplementedError();
+  
+  String get lookUpButtonLabel =>  '';
+  
+ 
+  String get menuDismissLabel => '';
+  
+  
+  String get searchWebButtonLabel => '';
+  
+  
+  String get shareButtonLabel => '';
+
+
+  
 }

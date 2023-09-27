@@ -534,25 +534,42 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get scrimOnTapHintRaw => 'null';
 
   @override
-  String get collapsedHint => '';
+  String get collapsedHint => 'collapsedHint';
 
   @override
-  String get expandedHint => '';
+  String get expandedHint => 'expandedHint';
 
   @override
-  String get expansionTileCollapsedHint => '';
+  String get expansionTileCollapsedHint => 'expansionTileCollapsedHint';
 
   @override
-  String get expansionTileCollapsedTapHint => '';
+  String get expansionTileCollapsedTapHint => 'expansionTileCollapsedTapHint';
 
   @override
-  String get expansionTileExpandedHint => '';
+  String get expansionTileExpandedHint => 'expansionTileExpandedHint';
 
   @override
-  String get expansionTileExpandedTapHint => '';
+  String get expansionTileExpandedTapHint => 'expansionTileExpandedTapHint';
 
   @override
   String get scanTextButtonLabel => '';
+  
+  
+  String get lookUpButtonLabel => '';
+  
+  
+  String get menuDismissLabel => '';
+  
+  
+  String get searchWebButtonLabel => '';
+  
+  
+  String get shareButtonLabel => '';
+
+
+    
+
+ 
 }
 
 const kuDateSymbols = {

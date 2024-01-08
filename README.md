@@ -28,6 +28,7 @@ Add these two delegates to *localizationsDelegates* array
 
 **KurdishMaterialLocalizations.delegate** For text and dates localization
 **KurdishWidgetLocalizations.delegate**  For text and UI directionality
+**KurdishCupertinoLocalizations.delegate** For Cupertino widgets localization
 
 ```dart
 return MaterialApp(
@@ -35,6 +36,7 @@ return MaterialApp(
 		..
 		KurdishMaterialLocalizations.delegate,
 		KurdishWidgetLocalizations.delegate,
+		KurdishCupertinoLocalizations.delegate,
 		...
 	],
 	supportedLocales: [ Locale('ku') ]

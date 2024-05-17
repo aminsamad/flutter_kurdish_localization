@@ -553,23 +553,24 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
 
   @override
   String get scanTextButtonLabel => '';
-  
-  
+
+  @override
   String get lookUpButtonLabel => '';
-  
-  
+
+  @override
   String get menuDismissLabel => '';
-  
-  
+
+  @override
   String get searchWebButtonLabel => '';
-  
-  
+
+  @override
   String get shareButtonLabel => '';
 
+  @override
+  String get clearButtonTooltip => 'پاککردن';
 
-    
-
- 
+  @override
+  String get selectedDateLabel => 'دەستپێکردنی بەروار';
 }
 
 const kuDateSymbols = {

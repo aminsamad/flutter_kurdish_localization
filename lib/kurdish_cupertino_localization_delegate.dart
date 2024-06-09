@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -349,17 +350,21 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   @override
   String get noSpellCheckReplacementsLabel => throw UnimplementedError();
   
+  @override
   String get lookUpButtonLabel =>  '';
   
  
+  @override
   String get menuDismissLabel => '';
   
   
+  @override
   String get searchWebButtonLabel => '';
   
   
+  @override
   String get shareButtonLabel => '';
-
-
   
+  @override
+  String get clearButtonLabel => '';
 }

@@ -1,12 +1,12 @@
 name: flutter_kurdish_localization
 description: Flutter Central Kurdish Localization in easy steps, simple ways to localize and translate your app to Central Kurdish.
-version: 1.1.0
+version: 1.1.1
 homepage: https://github.com/aminsamad/flutter_kurdish_localization
 
 
 environment:
-  sdk: '>=3.2.6 <4.0.0'
-  flutter: '>=3.3.0'
+  sdk: '>=3.4.3 <4.0.0'
+  flutter: ">=1.17.0"
 
 dependencies:
   flutter:
@@ -20,7 +20,7 @@ dependencies:
       
   flutter_web_plugins:
     sdk: flutter
-  intl: ^0.18.1
+  intl: ^0.19.0
   plugin_platform_interface: ^2.0.2
 
 dev_dependencies:

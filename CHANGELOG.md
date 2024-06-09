@@ -57,3 +57,6 @@
 
 ## 1.1.0
 * Fixing Issues
+
+## 1.1.1
+* Fixing Issues

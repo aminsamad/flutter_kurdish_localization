@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -68,34 +69,8 @@ const kuDateSymbols2 = {
   'NAME': 'ku',
   'ERAS': ['پ.ز', 'ز'],
   'ERANAMES': ['پێش زاینی', 'زاینی'],
-  'NARROWMONTHS': [
-    'ک.د',
-    'ش',
-    'ز',
-    'ن',
-    'م',
-    'ح',
-    'ت',
-    'ئ',
-    'ل',
-    'ت.ی',
-    'ت.د',
-    'ک.ی'
-  ],
-  'STANDALONENARROWMONTHS': [
-    'ک.د',
-    'ش',
-    'ز',
-    'ن',
-    'م',
-    'ح',
-    'ت',
-    'ئ',
-    'ل',
-    'ت.ی',
-    'ت.د',
-    'ک.ی'
-  ],
+  'NARROWMONTHS': ['ک.د', 'ش', 'ز', 'ن', 'م', 'ح', 'ت', 'ئ', 'ل', 'ت.ی', 'ت.د', 'ک.ی'],
+  'STANDALONENARROWMONTHS': ['ک.د', 'ش', 'ز', 'ن', 'م', 'ح', 'ت', 'ئ', 'ل', 'ت.ی', 'ت.د', 'ک.ی'],
   'MONTHS': [
     'کانونی دووەم',
     'شوبات',
@@ -152,42 +127,10 @@ const kuDateSymbols2 = {
     'تشرینی دووەم',
     'کانونی یەکەم',
   ],
-  'WEEKDAYS': [
-    'یەکشەممە',
-    'دووشەممە',
-    'سێشەممە',
-    'چوارشەممە',
-    'پێنجشەممە',
-    'هەینی',
-    'شەممە'
-  ],
-  'STANDALONEWEEKDAYS': [
-    'یەکشەممە',
-    'دووشەممە',
-    'سێشەممە',
-    'چوارشەممە',
-    'پێنجشەممە',
-    'هەینی',
-    'شەممە'
-  ],
-  'SHORTWEEKDAYS': [
-    'یەکشەم',
-    'دووشەم',
-    'سێشەم',
-    'چوارشەم',
-    'پێنجشەم',
-    'هەینی',
-    'شەممە'
-  ],
-  'STANDALONESHORTWEEKDAYS': [
-    'یەکشەم',
-    'دووشەم',
-    'سێشەم',
-    'چوارشەم',
-    'پێنجشەم',
-    'هەینی',
-    'شەممە'
-  ],
+  'WEEKDAYS': ['یەکشەممە', 'دووشەممە', 'سێشەممە', 'چوارشەممە', 'پێنجشەممە', 'هەینی', 'شەممە'],
+  'STANDALONEWEEKDAYS': ['یەکشەممە', 'دووشەممە', 'سێشەممە', 'چوارشەممە', 'پێنجشەممە', 'هەینی', 'شەممە'],
+  'SHORTWEEKDAYS': ['یەکشەم', 'دووشەم', 'سێشەم', 'چوارشەم', 'پێنجشەم', 'هەینی', 'شەممە'],
+  'STANDALONESHORTWEEKDAYS': ['یەکشەم', 'دووشەم', 'سێشەم', 'چوارشەم', 'پێنجشەم', 'هەینی', 'شەممە'],
   'NARROWWEEKDAYS': ['ی', 'د', 'س', 'چ', 'پ', 'ه', 'ش'],
   'STANDALONENARROWWEEKDAYS': ['ی', 'د', 'س', 'چ', 'پ', 'ه', 'ش'],
   'SHORTQUARTERS': ['چ١', 'چ٢', 'چ٣', 'چ٤'],
@@ -219,8 +162,7 @@ const kuDateSymbols2 = {
 };
 
 // #docregion Delegate
-class KurdishCupertinoLocalizationsDelegate
-    extends LocalizationsDelegate<CupertinoLocalizations> {
+class KurdishCupertinoLocalizationsDelegate extends LocalizationsDelegate<CupertinoLocalizations> {
   const KurdishCupertinoLocalizationsDelegate();
 
   @override
@@ -258,6 +200,7 @@ class KurdishCupertinoLocalizationsDelegate
         singleDigitHourFormat: intl.DateFormat('EEEE, MMMM d, y', localeName),
         singleDigitMinuteFormat: intl.DateFormat('MMMM y', localeName),
         singleDigitSecondFormat: intl.DateFormat('MMM d', localeName),
+        weekdayFormat: intl.DateFormat('ddd', localeName),
       ),
     );
   }
@@ -282,6 +225,7 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
     required super.singleDigitHourFormat,
     required super.singleDigitMinuteFormat,
     required super.singleDigitSecondFormat,
+    required super.weekdayFormat,
   });
 
 // #docregion Getters
@@ -312,8 +256,7 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   @override
   String get selectAllButtonLabel => r'دیاریکردنی هەموو';
 
-  static const LocalizationsDelegate<CupertinoLocalizations> delegate =
-      KurdishCupertinoLocalizationsDelegate();
+  static const LocalizationsDelegate<CupertinoLocalizations> delegate = KurdishCupertinoLocalizationsDelegate();
 
   @override
   String get datePickerDateOrderString => "هەڵبژاردنی بەروار";
@@ -346,8 +289,7 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   String get todayLabel => "ئەمڕۆ";
 
   @override
-  String get noSpellCheckReplacementsLabel =>
-      "هیچ جێگرەوەیەکی پشکنینی ڕێنووسی نییە";
+  String get noSpellCheckReplacementsLabel => "هیچ جێگرەوەیەکی پشکنینی ڕێنووسی نییە";
 
   @override
   String get lookUpButtonLabel => 'بە دوادا گەڕان';
@@ -360,7 +302,7 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
 
   @override
   String get shareButtonLabel => 'هاوبەشکردن';
-  
+
   @override
   String get clearButtonLabel => "";
 }

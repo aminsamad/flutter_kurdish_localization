@@ -1,5 +1,5 @@
-<p align="center"><img width=12.5% src="https://raw.githubusercontent.com/aminsamad/flutter_kurdish_localization/master/pic/ku.png"></p>
-<p align="center"><img width=60% src="https://raw.githubusercontent.com/aminsamad/flutter_kurdish_localization/master/pic/Designer.png"></p>
+This Is Fork Of Flutter Kurdish Localization
+
 
 <hr>
 
@@ -50,6 +50,6 @@ return MaterialApp(
 ## Links
 
 
-* [Source code](https://github.com/aminsamad/flutter_kurdish_localization/)
-* [Instagram](https://instagram.com/amin._.samad/)
-* [Facebook](https://www.facebook.com/amin.samad.14418/)
+* [Source code](https://github.com/dev-omarkaialy/flutter_kurdish_localization_fork/)
+* [Telegram](https://t.me/Omar_k_flutter)
+* [LinkedIn](https://linkedin.com/in/omarkaialy)

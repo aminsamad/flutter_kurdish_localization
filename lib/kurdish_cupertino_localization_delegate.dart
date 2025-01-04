@@ -1,4 +1,5 @@
 import 'dart:async';
+
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
@@ -239,26 +240,27 @@ class KurdishCupertinoLocalizationsDelegate
 
     return SynchronousFuture<CupertinoLocalizations>(
       KurdishCupertinoLocalizations(
-        localeName: localeName,
-        // The `intl` library's NumberFormat class is generated from CLDR data
-        // (see https://github.com/dart-lang/intl/blob/master/lib/number_symbols_data.dart).
-        // Unfortunately, there is no way to use a locale that isn't defined in
-        // this map and the only way to work around this is to use a listed
-        // locale's NumberFormat symbols. So, here we use the number formats
-        // for 'en_US' instead.
-        decimalFormat: intl.NumberFormat('#,##0.###', 'ar'),
-        // DateFormat here will use the symbols and patterns provided in the
-        // `date_symbol_data_custom.initializeDateFormattingCustom` call above.
-        // However, an alternative is to simply use a supported locale's
-        // DateFormat symbols, similar to NumberFormat above.
-        fullYearFormat: intl.DateFormat('y', localeName),
-        dayFormat: intl.DateFormat('yMd', localeName),
-        doubleDigitMinuteFormat: intl.DateFormat('yMMMd', localeName),
-        mediumDateFormat: intl.DateFormat('EEE, MMM d', localeName),
-        singleDigitHourFormat: intl.DateFormat('EEEE, MMMM d, y', localeName),
-        singleDigitMinuteFormat: intl.DateFormat('MMMM y', localeName),
-        singleDigitSecondFormat: intl.DateFormat('MMM d', localeName),
-      ),
+          localeName: localeName,
+
+          // The `intl` library's NumberFormat class is generated from CLDR data
+          // (see https://github.com/dart-lang/intl/blob/master/lib/number_symbols_data.dart).
+          // Unfortunately, there is no way to use a locale that isn't defined in
+          // this map and the only way to work around this is to use a listed
+          // locale's NumberFormat symbols. So, here we use the number formats
+          // for 'en_US' instead.
+          decimalFormat: intl.NumberFormat('#,##0.###', 'ar'),
+          // DateFormat here will use the symbols and patterns provided in the
+          // `date_symbol_data_custom.initializeDateFormattingCustom` call above.
+          // However, an alternative is to simply use a supported locale's
+          // DateFormat symbols, similar to NumberFormat above.
+          fullYearFormat: intl.DateFormat('y', localeName),
+          dayFormat: intl.DateFormat('yMd', localeName),
+          doubleDigitMinuteFormat: intl.DateFormat('yMMMd', localeName),
+          mediumDateFormat: intl.DateFormat('EEE, MMM d', localeName),
+          singleDigitHourFormat: intl.DateFormat('EEEE, MMMM d, y', localeName),
+          singleDigitMinuteFormat: intl.DateFormat('MMMM y', localeName),
+          singleDigitSecondFormat: intl.DateFormat('MMM d', localeName),
+          weekdayFormat: intl.DateFormat('EEE', localeName)),
     );
   }
 
@@ -282,6 +284,7 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
     required super.singleDigitHourFormat,
     required super.singleDigitMinuteFormat,
     required super.singleDigitSecondFormat,
+    required super.weekdayFormat,
   });
 
 // #docregion Getters
@@ -360,7 +363,7 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
 
   @override
   String get shareButtonLabel => 'هاوبەشکردن';
-  
+
   @override
   String get clearButtonLabel => "";
 }

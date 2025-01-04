@@ -1,12 +1,14 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
-import 'package:flutter_kurdish_localization/flutter_kurdish_localization.dart';
-import 'package:flutter_kurdish_localization_example/util/constants.dart';
 import 'package:flutter_kurdish_localization_example/localization/demo_localization.dart';
 import 'package:flutter_kurdish_localization_example/router/custom_router.dart';
 import 'package:flutter_kurdish_localization_example/router/route_constants.dart';
+import 'package:flutter_kurdish_localization_example/util/constants.dart';
+import 'package:flutter_kurdish_localization_fork/kurdish_material_localization_delegate.dart';
+import 'package:flutter_kurdish_localization_fork/kurdish_widget_localization_delegate.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:shared_preferences/shared_preferences.dart';
+
 import 'localization/language_constants.dart';
 
 bool? landingScreen;

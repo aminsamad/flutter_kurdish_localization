@@ -3,7 +3,7 @@
 #
 
 list(APPEND FLUTTER_PLUGIN_LIST
-  flutter_kurdish_localization
+  flutter_kurdish_localization_fork
 )
 
 list(APPEND FLUTTER_FFI_PLUGIN_LIST

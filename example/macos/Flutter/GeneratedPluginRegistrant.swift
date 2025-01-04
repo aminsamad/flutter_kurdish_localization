@@ -5,7 +5,7 @@
 import FlutterMacOS
 import Foundation
 
-import flutter_kurdish_localization
+import flutter_kurdish_localization_fork
 import shared_preferences_foundation
 
 func RegisterGeneratedPlugins(registry: FlutterPluginRegistry) {

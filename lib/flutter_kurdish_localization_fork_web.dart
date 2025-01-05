@@ -9,12 +9,14 @@ import 'package:web/web.dart' as web;
 import 'flutter_kurdish_localization_fork_platform_interface.dart';
 
 /// A web implementation of the FlutterKurdishLocalizationForkPlatform of the FlutterKurdishLocalizationFork plugin.
-class FlutterKurdishLocalizationForkWeb extends FlutterKurdishLocalizationForkPlatform {
+class FlutterKurdishLocalizationForkWeb
+    extends FlutterKurdishLocalizationForkPlatform {
   /// Constructs a FlutterKurdishLocalizationForkWeb
   FlutterKurdishLocalizationForkWeb();
 
   static void registerWith(Registrar registrar) {
-    FlutterKurdishLocalizationForkPlatform.instance = FlutterKurdishLocalizationForkWeb();
+    FlutterKurdishLocalizationForkPlatform.instance =
+        FlutterKurdishLocalizationForkWeb();
   }
 
   /// Returns a [String] containing the version of the platform.

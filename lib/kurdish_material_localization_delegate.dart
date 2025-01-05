@@ -565,10 +565,10 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
 
   @override
   String get shareButtonLabel => 'هاوبەشکردن';
-  
+
   @override
   String get clearButtonTooltip => "";
-  
+
   @override
   String get selectedDateLabel => "";
 }

@@ -1,7 +1,8 @@
 import 'package:flutter/material.dart';
 
 class CustomContainer extends StatelessWidget {
-  const CustomContainer({Key? key, this.child, this.margin, this.padding, this.alignment})
+  const CustomContainer(
+      {Key? key, this.child, this.margin, this.padding, this.alignment})
       : super(key: key);
   final Widget? child;
   final EdgeInsetsGeometry? margin;

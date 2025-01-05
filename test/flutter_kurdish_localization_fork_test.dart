@@ -7,23 +7,28 @@ import 'package:plugin_platform_interface/plugin_platform_interface.dart';
 class MockFlutterKurdishLocalizationForkPlatform
     with MockPlatformInterfaceMixin
     implements FlutterKurdishLocalizationForkPlatform {
-
   @override
   Future<String?> getPlatformVersion() => Future.value('42');
 }
 
 void main() {
-  final FlutterKurdishLocalizationForkPlatform initialPlatform = FlutterKurdishLocalizationForkPlatform.instance;
+  final FlutterKurdishLocalizationForkPlatform initialPlatform =
+      FlutterKurdishLocalizationForkPlatform.instance;
 
-  test('$MethodChannelFlutterKurdishLocalizationFork is the default instance', () {
-    expect(initialPlatform, isInstanceOf<MethodChannelFlutterKurdishLocalizationFork>());
+  test('$MethodChannelFlutterKurdishLocalizationFork is the default instance',
+      () {
+    expect(initialPlatform,
+        isInstanceOf<MethodChannelFlutterKurdishLocalizationFork>());
   });
 
   test('getPlatformVersion', () async {
-    FlutterKurdishLocalizationFork flutterKurdishLocalizationForkPlugin = FlutterKurdishLocalizationFork();
-    MockFlutterKurdishLocalizationForkPlatform fakePlatform = MockFlutterKurdishLocalizationForkPlatform();
+    FlutterKurdishLocalizationFork flutterKurdishLocalizationForkPlugin =
+        FlutterKurdishLocalizationFork();
+    MockFlutterKurdishLocalizationForkPlatform fakePlatform =
+        MockFlutterKurdishLocalizationForkPlatform();
     FlutterKurdishLocalizationForkPlatform.instance = fakePlatform;
 
-    expect(await flutterKurdishLocalizationForkPlugin.getPlatformVersion(), '42');
+    expect(
+        await flutterKurdishLocalizationForkPlugin.getPlatformVersion(), '42');
   });
 }

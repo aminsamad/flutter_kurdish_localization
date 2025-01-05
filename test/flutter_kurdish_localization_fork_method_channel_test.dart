@@ -5,11 +5,14 @@ import 'package:flutter_kurdish_localization_fork/flutter_kurdish_localization_f
 void main() {
   TestWidgetsFlutterBinding.ensureInitialized();
 
-  MethodChannelFlutterKurdishLocalizationFork platform = MethodChannelFlutterKurdishLocalizationFork();
-  const MethodChannel channel = MethodChannel('flutter_kurdish_localization_fork');
+  MethodChannelFlutterKurdishLocalizationFork platform =
+      MethodChannelFlutterKurdishLocalizationFork();
+  const MethodChannel channel =
+      MethodChannel('flutter_kurdish_localization_fork');
 
   setUp(() {
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(
       channel,
       (MethodCall methodCall) async {
         return '42';
@@ -18,7 +21,8 @@ void main() {
   });
 
   tearDown(() {
-    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger.setMockMethodCallHandler(channel, null);
+    TestDefaultBinaryMessengerBinding.instance.defaultBinaryMessenger
+        .setMockMethodCallHandler(channel, null);
   });
 
   test('getPlatformVersion', () async {

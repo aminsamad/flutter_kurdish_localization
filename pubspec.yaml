@@ -9,6 +9,7 @@ environment:
   flutter: ">=1.17.0"
 
 dependencies:
+  change_app_package_name: ^1.4.0
   flutter:
     sdk: flutter
 

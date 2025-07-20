@@ -46,4 +46,32 @@ class KurdishWidgetLocalizations extends WidgetsLocalizations {
 
   @override
   String get reorderItemUp => throw UnimplementedError();
+  
+  @override
+  // TODO: implement copyButtonLabel
+  String get copyButtonLabel => throw UnimplementedError();
+  
+  @override
+  // TODO: implement cutButtonLabel
+  String get cutButtonLabel => throw UnimplementedError();
+  
+  @override
+  // TODO: implement lookUpButtonLabel
+  String get lookUpButtonLabel => throw UnimplementedError();
+  
+  @override
+  // TODO: implement pasteButtonLabel
+  String get pasteButtonLabel => throw UnimplementedError();
+  
+  @override
+  // TODO: implement searchWebButtonLabel
+  String get searchWebButtonLabel => throw UnimplementedError();
+  
+  @override
+  // TODO: implement selectAllButtonLabel
+  String get selectAllButtonLabel => throw UnimplementedError();
+  
+  @override
+  // TODO: implement shareButtonLabel
+  String get shareButtonLabel => throw UnimplementedError();
 }

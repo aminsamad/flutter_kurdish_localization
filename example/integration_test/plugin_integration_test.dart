@@ -7,12 +7,10 @@
 // https://flutter.dev/to/integration-testing
 
 import 'package:flutter_test/flutter_test.dart';
-import 'package:integration_test/integration_test.dart';
 
 import 'package:flutter_kurdish_localization_fork/flutter_kurdish_localization_fork.dart';
 
 void main() {
-  IntegrationTestWidgetsFlutterBinding.ensureInitialized();
 
   testWidgets('getPlatformVersion test', (WidgetTester tester) async {
     final FlutterKurdishLocalizationFork plugin =

@@ -6,21 +6,21 @@ import 'package:intl/date_symbol_data_custom.dart' as date_symbol_data_custom;
 import 'package:intl/date_symbols.dart' as intl;
 import 'package:intl/intl.dart' as intl;
 
-/// A custom set of date patterns for the `nn` locale.
+/// A custom set of date patterns for the `ku` locale.
 //
-/// These are not accurate and are just a clone of the date patterns for the
-/// `no` locale to demonstrate how one would write and use custom date patterns.
+/// These patterns are designed for Central Kurdish (Sorani) localization
+/// following Kurdish cultural conventions and RTL text direction.
 // #docregion Date
 const kurdishLocaleDatePatterns = {
-  'd': 'd.',
+  'd': 'd',
   'E': 'ccc',
   'EEEE': 'cccc',
   'LLL': 'LLL',
-// #enddocregion Date
+  // #enddocregion Date
   'LLLL': 'LLLL',
-  'M': 'L.',
-  'Md': 'd.M.',
-  'MEd': 'EEE d.M.',
+  'M': 'L',
+  'Md': 'd/M',
+  'MEd': 'EEE d/M',
   'MMM': 'LLL',
   'MMMd': 'd. MMM',
   'MMMEd': 'EEE d. MMM',
@@ -30,9 +30,9 @@ const kurdishLocaleDatePatterns = {
   'QQQ': 'QQQ',
   'QQQQ': 'QQQQ',
   'y': 'y',
-  'yM': 'M.y',
-  'yMd': 'd.M.y',
-  'yMEd': 'EEE d.MM.y',
+  'yM': 'M/y',
+  'yMd': 'd/M/y',
+  'yMEd': 'EEE d/M/y',
   'yMMM': 'MMM y',
   'yMMMd': 'd. MMM y',
   'yMMMEd': 'EEE d. MMM y',
@@ -59,10 +59,10 @@ const kurdishLocaleDatePatterns = {
   'ZZZZ': 'ZZZZ',
 };
 
-/// A custom set of date symbols for the `nn` locale.
+/// A custom set of date symbols for the `ku` locale.
 ///
-/// These are not accurate and are just a clone of the date symbols for the
-/// `no` locale to demonstrate how one would write and use custom date symbols.
+/// These symbols are designed for Central Kurdish (Sorani) localization
+/// with proper Kurdish month names, weekdays, and cultural settings.
 // #docregion Date2
 const kuDateSymbols2 = {
   'NAME': 'ku',
@@ -80,7 +80,7 @@ const kuDateSymbols2 = {
     'ل',
     'ت.ی',
     'ت.د',
-    'ک.ی'
+    'ک.ی',
   ],
   'STANDALONENARROWMONTHS': [
     'ک.د',
@@ -94,7 +94,7 @@ const kuDateSymbols2 = {
     'ل',
     'ت.ی',
     'ت.د',
-    'ک.ی'
+    'ک.ی',
   ],
   'MONTHS': [
     'کانونی دووەم',
@@ -159,7 +159,7 @@ const kuDateSymbols2 = {
     'چوارشەممە',
     'پێنجشەممە',
     'هەینی',
-    'شەممە'
+    'شەممە',
   ],
   'STANDALONEWEEKDAYS': [
     'یەکشەممە',
@@ -168,7 +168,7 @@ const kuDateSymbols2 = {
     'چوارشەممە',
     'پێنجشەممە',
     'هەینی',
-    'شەممە'
+    'شەممە',
   ],
   'SHORTWEEKDAYS': [
     'یەکشەم',
@@ -177,7 +177,7 @@ const kuDateSymbols2 = {
     'چوارشەم',
     'پێنجشەم',
     'هەینی',
-    'شەممە'
+    'شەممە',
   ],
   'STANDALONESHORTWEEKDAYS': [
     'یەکشەم',
@@ -186,36 +186,21 @@ const kuDateSymbols2 = {
     'چوارشەم',
     'پێنجشەم',
     'هەینی',
-    'شەممە'
+    'شەممە',
   ],
   'NARROWWEEKDAYS': ['ی', 'د', 'س', 'چ', 'پ', 'ه', 'ش'],
   'STANDALONENARROWWEEKDAYS': ['ی', 'د', 'س', 'چ', 'پ', 'ه', 'ش'],
   'SHORTQUARTERS': ['چ١', 'چ٢', 'چ٣', 'چ٤'],
   'QUARTERS': ['چارەکی یەکەم', 'چارەکی دووەم', 'چارەکی سێیەم', 'چارەکی چوارەم'],
   'AMPMS': ['پ.ن', 'د.ن'],
-  'DATEFORMATS': [
-    'EEEE، d MMMM y',
-    'd MMMM y',
-    'dd‏/MM‏/y',
-    'd‏/M‏/y',
-  ],
-  'TIMEFORMATS': [
-    'h:mm:ss a zzzz',
-    'h:mm:ss a z',
-    'h:mm:ss a',
-    'h:mm a',
-  ],
+  'DATEFORMATS': ['EEEE، d MMMM y', 'd MMMM y', 'dd‏/MM‏/y', 'd‏/M‏/y'],
+  'TIMEFORMATS': ['h:mm:ss a zzzz', 'h:mm:ss a z', 'h:mm:ss a', 'h:mm a'],
   'AVAILABLEFORMATS': null,
-  'DATETIMEFORMATS': [
-    '{1} {0}',
-    '{1} {0}',
-    '{1} {0}',
-    '{1} {0}',
-  ],
+  'DATETIMEFORMATS': ['{1} {0}', '{1} {0}', '{1} {0}', '{1} {0}'],
   'ZERODIGIT': '٠',
   'FIRSTDAYOFWEEK': 5,
   'WEEKENDRANGE': [4, 5],
-  'FIRSTWEEKCUTOFFDAY': 3
+  'FIRSTWEEKCUTOFFDAY': 3,
 };
 
 // #docregion Delegate
@@ -228,8 +213,8 @@ class KurdishCupertinoLocalizationsDelegate
 
   @override
   Future<CupertinoLocalizations> load(Locale locale) async {
-    final String localeName = intl.Intl.canonicalizedLocale(locale.toString());
-    // The locale (in this case `nn`) needs to be initialized into the custom
+    const String localeName = 'ku';
+    // The locale (in this case `ku`) needs to be initialized into the custom
     // date symbols and patterns setup that Flutter uses.
     date_symbol_data_custom.initializeDateFormattingCustom(
       locale: localeName,
@@ -268,10 +253,9 @@ class KurdishCupertinoLocalizationsDelegate
 }
 // #enddocregion Delegate
 
-/// A custom set of localizations for the 'nn' locale. In this example, only
-/// the value for openAppDrawerTooltip was modified to use a custom message as
-/// an example. Everything else uses the American English (en_US) messages
-/// and formatting.
+/// A custom set of localizations for the 'ku' locale. This provides
+/// comprehensive Central Kurdish (Sorani) translations for all Cupertino
+/// components with proper RTL support and Kurdish cultural conventions.
 class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   const KurdishCupertinoLocalizations({
     super.localeName = 'ku',
@@ -283,15 +267,15 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
     required super.singleDigitHourFormat,
     required super.singleDigitMinuteFormat,
     required super.singleDigitSecondFormat,
-    required super.weekdayFormat, // Add this
+    required super.weekdayFormat,
   });
 
-// #docregion Getters
+  // #docregion Getters
 
   @override
   String get alertDialogLabel => r'ئاگادارکردنەوە';
 
-// #enddocregion Getters
+  // #enddocregion Getters
 
   @override
   String get anteMeridiemAbbreviation => r'پ.ن';
@@ -324,16 +308,16 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   String get datePickerDateTimeOrderString => "کات هەڵبژێرە";
 
   @override
-  String? get datePickerHourSemanticsLabelOther => "کاتژمێری هەڵبژاردنی بەروار";
+  String? get datePickerHourSemanticsLabelOther => "\$count کاتژمێر";
 
   @override
-  String? get datePickerMinuteSemanticsLabelOther => "خولەکی هەڵبژاردنی بەروار";
+  String? get datePickerMinuteSemanticsLabelOther => "\$count خولەک";
 
   @override
   String get searchTextFieldPlaceholderLabel => "گەڕان";
 
   @override
-  String get tabSemanticsLabelRaw => "ماناسازی تاب";
+  String get tabSemanticsLabelRaw => "خشتەبەندی \$tabIndex لە \$tabCount";
 
   @override
   String? get timerPickerHourLabelOther => "هەڵبژێرەری کاتژمێر";
@@ -355,7 +339,7 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   String get lookUpButtonLabel => 'بە دوادا گەڕان';
 
   @override
-  String get menuDismissLabel => 'بەلاوە نان';
+  String get menuDismissLabel => 'داخستنی پێڕست';
 
   @override
   String get searchWebButtonLabel => 'گەڕان لە وێب';
@@ -364,5 +348,11 @@ class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   String get shareButtonLabel => 'هاوبەشکردن';
 
   @override
-  String get clearButtonLabel => "";
+  String get clearButtonLabel => "پاککردنەوە";
+
+  @override
+  String get backButtonLabel => 'گەڕانەوە';
+
+  @override
+  String get cancelButtonLabel => 'هەڵوەشاندنەوە';
 }

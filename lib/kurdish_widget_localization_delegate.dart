@@ -30,20 +30,41 @@ class KurdishWidgetLocalizations extends WidgetsLocalizations {
   TextDirection get textDirection => TextDirection.rtl;
 
   @override
-  String get reorderItemDown => throw UnimplementedError();
+  String get reorderItemDown => 'بڕۆ خوارەوە';
 
   @override
-  String get reorderItemLeft => throw UnimplementedError();
+  String get reorderItemLeft => 'بڕۆ لای چەپ';
 
   @override
-  String get reorderItemRight => throw UnimplementedError();
+  String get reorderItemRight => 'بڕۆ لای راست';
 
   @override
-  String get reorderItemToEnd => throw UnimplementedError();
+  String get reorderItemToEnd => 'بڕۆ کۆتایی';
 
   @override
-  String get reorderItemToStart => throw UnimplementedError();
+  String get reorderItemToStart => 'بڕۆ سەرەتا';
 
   @override
-  String get reorderItemUp => throw UnimplementedError();
+  String get reorderItemUp => 'بڕۆ سەرەوە';
+
+  @override
+  String get copyButtonLabel => 'کۆپی';
+
+  @override
+  String get cutButtonLabel => 'بڕین';
+
+  @override
+  String get pasteButtonLabel => 'پەیست';
+
+  @override
+  String get selectAllButtonLabel => 'هەمووی دیاریبکە';
+
+  @override
+  String get lookUpButtonLabel => 'گەڕان';
+
+  @override
+  String get searchWebButtonLabel => 'گەڕانی وێب';
+
+  @override
+  String get shareButtonLabel => 'هاوبەشکردن';
 }

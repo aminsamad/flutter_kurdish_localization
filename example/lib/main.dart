@@ -27,7 +27,7 @@ void main() async {
 
 const List<Locale> supportedLocales = [
   Locale('en'),
-  Locale('ku'),
+  Locale('ckb'),
   Locale('ar'),
 ];
 

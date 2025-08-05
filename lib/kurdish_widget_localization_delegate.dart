@@ -9,7 +9,7 @@ class _KurdishMaterialLocalizationsDelegate
   const _KurdishMaterialLocalizationsDelegate();
 
   @override
-  bool isSupported(Locale locale) => locale.languageCode == 'ku';
+  bool isSupported(Locale locale) => locale.languageCode == 'ckb';
 
   @override
   Future<WidgetsLocalizations> load(Locale locale) async {

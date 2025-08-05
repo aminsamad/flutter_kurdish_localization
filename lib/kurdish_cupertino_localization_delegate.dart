@@ -6,7 +6,7 @@ import 'package:intl/date_symbol_data_custom.dart' as date_symbol_data_custom;
 import 'package:intl/date_symbols.dart' as intl;
 import 'package:intl/intl.dart' as intl;
 
-/// A custom set of date patterns for the `ku` locale.
+/// A custom set of date patterns for the `ckb` locale.
 //
 /// These patterns are designed for Central Kurdish (Sorani) localization
 /// following Kurdish cultural conventions and RTL text direction.
@@ -59,13 +59,13 @@ const kurdishLocaleDatePatterns = {
   'ZZZZ': 'ZZZZ',
 };
 
-/// A custom set of date symbols for the `ku` locale.
+/// A custom set of date symbols for the `ckb` locale.
 ///
 /// These symbols are designed for Central Kurdish (Sorani) localization
 /// with proper Kurdish month names, weekdays, and cultural settings.
 // #docregion Date2
-const kuDateSymbols2 = {
-  'NAME': 'ku',
+const ckbDateSymbols2 = {
+  'NAME': 'ckb',
   'ERAS': ['پ.ز', 'ز'],
   'ERANAMES': ['پێش زاینی', 'زاینی'],
   'NARROWMONTHS': [
@@ -209,17 +209,17 @@ class KurdishCupertinoLocalizationsDelegate
   const KurdishCupertinoLocalizationsDelegate();
 
   @override
-  bool isSupported(Locale locale) => locale.languageCode == 'ku';
+  bool isSupported(Locale locale) => locale.languageCode == 'ckb';
 
   @override
   Future<CupertinoLocalizations> load(Locale locale) async {
-    const String localeName = 'ku';
-    // The locale (in this case `ku`) needs to be initialized into the custom
+    const String localeName = 'ckb';
+    // The locale (in this case `ckb`) needs to be initialized into the custom
     // date symbols and patterns setup that Flutter uses.
     date_symbol_data_custom.initializeDateFormattingCustom(
       locale: localeName,
       patterns: kurdishLocaleDatePatterns,
-      symbols: intl.DateSymbols.deserializeFromMap(kuDateSymbols2),
+      symbols: intl.DateSymbols.deserializeFromMap(ckbDateSymbols2),
     );
 
     return SynchronousFuture<CupertinoLocalizations>(
@@ -253,12 +253,12 @@ class KurdishCupertinoLocalizationsDelegate
 }
 // #enddocregion Delegate
 
-/// A custom set of localizations for the 'ku' locale. This provides
+/// A custom set of localizations for the 'ckb' locale. This provides
 /// comprehensive Central Kurdish (Sorani) translations for all Cupertino
 /// components with proper RTL support and Kurdish cultural conventions.
 class KurdishCupertinoLocalizations extends GlobalCupertinoLocalizations {
   const KurdishCupertinoLocalizations({
-    super.localeName = 'ku',
+    super.localeName = 'ckb',
     required super.fullYearFormat,
     required super.mediumDateFormat,
     required super.decimalFormat,

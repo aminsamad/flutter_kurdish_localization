@@ -12,16 +12,16 @@ class _KurdishMaterialLocalizationsDelegate
   const _KurdishMaterialLocalizationsDelegate();
 
   @override
-  bool isSupported(Locale locale) => locale.languageCode == 'ku';
+  bool isSupported(Locale locale) => locale.languageCode == 'ckb';
 
   @override
   Future<MaterialLocalizations> load(Locale locale) async {
-    const String localeName = 'ku';
+    const String localeName = 'ckb';
 
     date_symbol_data_custom.initializeDateFormattingCustom(
       locale: localeName,
-      patterns: kuLocaleDatePatterns,
-      symbols: intl.DateSymbols.deserializeFromMap(kuDateSymbols),
+      patterns: ckbLocaleDatePatterns,
+      symbols: intl.DateSymbols.deserializeFromMap(ckbDateSymbols),
     );
     return SynchronousFuture<MaterialLocalizations>(
       KurdishMaterialLocalizations(
@@ -50,7 +50,7 @@ class _KurdishMaterialLocalizationsDelegate
 
 class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   const KurdishMaterialLocalizations({
-    String localeName = 'ku',
+    String localeName = 'ckb',
     required intl.DateFormat fullYearFormat,
     required intl.DateFormat shortDateFormat,
     required intl.DateFormat compactDateFormat,
@@ -573,8 +573,8 @@ class KurdishMaterialLocalizations extends GlobalMaterialLocalizations {
   String get selectedDateLabel => 'بەرواری هەڵبژێردراو';
 }
 
-const kuDateSymbols = {
-  'NAME': 'ku',
+const ckbDateSymbols = {
+  'NAME': 'ckb',
   'ERAS': ['پ.ز', 'ز'],
   'ERANAMES': ['پێش زاینی', 'زاینی'],
   'NARROWMONTHS': [
@@ -726,7 +726,7 @@ const kuDateSymbols = {
   'WEEKENDRANGE': [4, 5],
   'FIRSTWEEKCUTOFFDAY': 3
 };
-const kuLocaleDatePatterns = {
+const ckbLocaleDatePatterns = {
   'd': 'd', // DAY
   'E': 'ccc', // ABBR_WEEKDAY
   'EEEE': 'cccc', // WEEKDAY

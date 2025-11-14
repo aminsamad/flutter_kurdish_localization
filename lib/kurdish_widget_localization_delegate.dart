@@ -1,12 +1,10 @@
 import 'dart:async';
-
 import 'package:flutter/widgets.dart';
 import 'package:flutter/foundation.dart';
-import 'package:flutter/material.dart';
 
-class _KurdishMaterialLocalizationsDelegate
+class _KurdishWidgetLocalizationsDelegate
     extends LocalizationsDelegate<WidgetsLocalizations> {
-  const _KurdishMaterialLocalizationsDelegate();
+  const _KurdishWidgetLocalizationsDelegate();
 
   @override
   bool isSupported(Locale locale) => locale.languageCode == 'ckb';
@@ -19,12 +17,12 @@ class _KurdishMaterialLocalizationsDelegate
   }
 
   @override
-  bool shouldReload(_KurdishMaterialLocalizationsDelegate old) => false;
+  bool shouldReload(_KurdishWidgetLocalizationsDelegate old) => false;
 }
 
 class KurdishWidgetLocalizations extends WidgetsLocalizations {
   static const LocalizationsDelegate<WidgetsLocalizations> delegate =
-      _KurdishMaterialLocalizationsDelegate();
+      _KurdishWidgetLocalizationsDelegate();
 
   @override
   TextDirection get textDirection => TextDirection.rtl;
@@ -67,4 +65,25 @@ class KurdishWidgetLocalizations extends WidgetsLocalizations {
 
   @override
   String get shareButtonLabel => 'هاوبەشکردن';
+
+  @override
+  String get modalBarrierDismissLabel => 'لادان';
+
+  @override
+  String get menuDismissLabel => 'داخستنی پێڕست';
+
+  @override
+  String get scanTextButtonLabel => 'سکانکردنی دەق';
+
+  @override
+  String get expansionTileCollapsedHint => 'دوو جار دابگرە بۆ فراوانکردن';
+
+  @override
+  String get expansionTileCollapsedTapHint => 'فراوان بکە بۆ زانیاری زیاتر';
+
+  @override
+  String get expansionTileExpandedHint => 'دوو جار دابگرە بۆ کۆکردنەوە';
+
+  @override
+  String get expansionTileExpandedTapHint => 'کۆیبکەرەوە';
 }

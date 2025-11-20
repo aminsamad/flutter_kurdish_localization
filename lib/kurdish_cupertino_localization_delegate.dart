@@ -3,6 +3,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/date_symbol_data_custom.dart' as date_symbol_data_custom;
+import 'package:intl/date_symbol_data_local.dart' as intl;
 import 'package:intl/date_symbols.dart' as intl;
 import 'package:intl/intl.dart' as intl;
 
@@ -221,6 +222,8 @@ class KurdishCupertinoLocalizationsDelegate
       patterns: kurdishLocaleDatePatterns,
       symbols: intl.DateSymbols.deserializeFromMap(ckbDateSymbols2),
     );
+
+    await intl.initializeDateFormatting('en_US', null);
 
     return SynchronousFuture<CupertinoLocalizations>(
       KurdishCupertinoLocalizations(

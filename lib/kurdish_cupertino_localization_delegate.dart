@@ -1,9 +1,7 @@
 import 'dart:async';
 import 'package:flutter/cupertino.dart';
-import 'package:flutter/foundation.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 import 'package:intl/date_symbol_data_custom.dart' as date_symbol_data_custom;
-import 'package:intl/date_symbol_data_local.dart' as intl;
 import 'package:intl/date_symbols.dart' as intl;
 import 'package:intl/intl.dart' as intl;
 
@@ -214,40 +212,56 @@ class KurdishCupertinoLocalizationsDelegate
 
   @override
   Future<CupertinoLocalizations> load(Locale locale) async {
-    const String localeName = 'ckb';
-    // The locale (in this case `ckb`) needs to be initialized into the custom
-    // date symbols and patterns setup that Flutter uses.
+    final String localeName = intl.Intl.canonicalizedLocale(locale.toString());
+
+    // ✅ FIX: Initialize Kurdish date formatting with await
     date_symbol_data_custom.initializeDateFormattingCustom(
       locale: localeName,
       patterns: kurdishLocaleDatePatterns,
       symbols: intl.DateSymbols.deserializeFromMap(ckbDateSymbols2),
     );
 
-    await intl.initializeDateFormatting('en_US', null);
+    late intl.DateFormat fullYearFormat;
+    late intl.DateFormat dayFormat;
+    late intl.DateFormat weekdayFormat;
+    late intl.DateFormat mediumDateFormat;
+    late intl.DateFormat singleDigitHourFormat;
+    late intl.DateFormat singleDigitMinuteFormat;
+    late intl.DateFormat doubleDigitMinuteFormat;
+    late intl.DateFormat singleDigitSecondFormat;
+    late intl.NumberFormat decimalFormat;
 
-    return SynchronousFuture<CupertinoLocalizations>(
-      KurdishCupertinoLocalizations(
-        localeName: localeName,
-        // The intl library's NumberFormat class is generated from CLDR data
-        // (see https://github.com/dart-lang/intl/blob/master/lib/number_symbols_data.dart).
-        // Unfortunately, there is no way to use a locale that isn't defined in
-        // this map and the only way to work around this is to use a listed
-        // locale's NumberFormat symbols. So, here we use the number formats
-        // for 'en_US' instead.
-        decimalFormat: intl.NumberFormat('#,##0.###', 'ar'),
-        // DateFormat here will use the symbols and patterns provided in the
-        // date_symbol_data_custom.initializeDateFormattingCustom call above.
-        // However, an alternative is to simply use a supported locale's
-        // DateFormat symbols, similar to NumberFormat above.
-        fullYearFormat: intl.DateFormat('y', localeName),
-        dayFormat: intl.DateFormat('yMd', localeName),
-        doubleDigitMinuteFormat: intl.DateFormat('yMMMd', localeName),
-        mediumDateFormat: intl.DateFormat('EEE, MMM d', localeName),
-        singleDigitHourFormat: intl.DateFormat('EEEE, MMMM d, y', localeName),
-        singleDigitMinuteFormat: intl.DateFormat('MMMM y', localeName),
-        singleDigitSecondFormat: intl.DateFormat('MMM d', localeName),
-        weekdayFormat: intl.DateFormat('EEEE', localeName), // Add this line
-      ),
+    void loadFormats(String? locale) {
+      fullYearFormat = intl.DateFormat.y(locale);
+      dayFormat = intl.DateFormat('yMd', locale);
+      weekdayFormat = intl.DateFormat.EEEE(locale);
+      mediumDateFormat = intl.DateFormat.MMMEd(locale);
+      singleDigitHourFormat = intl.DateFormat('EEEE, MMMM d, y', locale);
+      singleDigitMinuteFormat = intl.DateFormat('MMMM y', locale);
+      doubleDigitMinuteFormat = intl.DateFormat('yMMMd', locale);
+      singleDigitSecondFormat = intl.DateFormat('MMM d', locale);
+      decimalFormat = intl.NumberFormat.decimalPattern('ar');
+    }
+
+    if (intl.DateFormat.localeExists(localeName)) {
+      loadFormats(localeName);
+    } else if (intl.DateFormat.localeExists(locale.languageCode)) {
+      loadFormats(locale.languageCode);
+    } else {
+      loadFormats(null);
+    }
+
+    return KurdishCupertinoLocalizations(
+      localeName: localeName,
+      decimalFormat: decimalFormat,
+      fullYearFormat: fullYearFormat,
+      dayFormat: dayFormat,
+      doubleDigitMinuteFormat: doubleDigitMinuteFormat,
+      mediumDateFormat: mediumDateFormat,
+      singleDigitHourFormat: singleDigitHourFormat,
+      singleDigitMinuteFormat: singleDigitMinuteFormat,
+      singleDigitSecondFormat: singleDigitSecondFormat,
+      weekdayFormat: weekdayFormat,
     );
   }
 

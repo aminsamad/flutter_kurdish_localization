@@ -17,7 +17,7 @@ class _KurdishMaterialLocalizationsDelegate
 
   @override
   Future<MaterialLocalizations> load(Locale locale) async {
-    const String localeName = 'ckb';
+    final String localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
     date_symbol_data_custom.initializeDateFormattingCustom(
       locale: localeName,
@@ -25,26 +25,61 @@ class _KurdishMaterialLocalizationsDelegate
       symbols: intl.DateSymbols.deserializeFromMap(ckbDateSymbols),
     );
 
-    await intl.initializeDateFormatting('en_US', null);
+    late intl.DateFormat fullYearFormat;
+    late intl.DateFormat compactDateFormat;
+    late intl.DateFormat shortDateFormat;
+    late intl.DateFormat mediumDateFormat;
+    late intl.DateFormat longDateFormat;
+    late intl.DateFormat yearMonthFormat;
+    late intl.DateFormat shortMonthDayFormat;
+    late intl.NumberFormat decimalFormat;
+    late intl.NumberFormat twoDigitZeroPaddedFormat;
 
-    return SynchronousFuture<MaterialLocalizations>(
-      KurdishMaterialLocalizations(
-        fullYearFormat: intl.DateFormat('y', localeName),
-        shortDateFormat: intl.DateFormat('dd/MM/yy', localeName),
-        compactDateFormat: intl.DateFormat('EEE, MMM d', localeName),
-        shortMonthDayFormat: intl.DateFormat('dd/MM', localeName),
-        mediumDateFormat: intl.DateFormat('EEE, MMM d', localeName),
-        longDateFormat: intl.DateFormat('EEEE, MMMM d, y', localeName),
-        yearMonthFormat: intl.DateFormat('MMMM y', localeName),
-        // The `intl` library's NumberFormat class is generated from CLDR data
-        // (see https://github.com/dart-lang/intl/blob/master/lib/number_symbols_data.dart).
-        // Unfortunately, there is no way to use a locale that isn't defined in
-        // this map and the only way to work around this is to use a listed
-        // locale's NumberFormat symbols. So, here we use the number formats
-        // for 'ar' instead.
-        decimalFormat: intl.NumberFormat('#,##0.###', 'ar'),
-        twoDigitZeroPaddedFormat: intl.NumberFormat('00', 'ar'),
-      ),
+    if (intl.DateFormat.localeExists(localeName)) {
+      fullYearFormat = intl.DateFormat.y(localeName);
+      compactDateFormat = intl.DateFormat.yMd(localeName);
+      shortDateFormat = intl.DateFormat.yMMMd(localeName);
+      mediumDateFormat = intl.DateFormat.MMMEd(localeName);
+      longDateFormat = intl.DateFormat.yMMMMEEEEd(localeName);
+      yearMonthFormat = intl.DateFormat.yMMMM(localeName);
+      shortMonthDayFormat = intl.DateFormat.MMMd(localeName);
+    } else if (intl.DateFormat.localeExists(locale.languageCode)) {
+      fullYearFormat = intl.DateFormat.y(locale.languageCode);
+      compactDateFormat = intl.DateFormat.yMd(locale.languageCode);
+      shortDateFormat = intl.DateFormat.yMMMd(locale.languageCode);
+      mediumDateFormat = intl.DateFormat.MMMEd(locale.languageCode);
+      longDateFormat = intl.DateFormat.yMMMMEEEEd(locale.languageCode);
+      yearMonthFormat = intl.DateFormat.yMMMM(locale.languageCode);
+      shortMonthDayFormat = intl.DateFormat.MMMd(locale.languageCode);
+    } else {
+      // Fallback to default (English)
+      fullYearFormat = intl.DateFormat.y();
+      compactDateFormat = intl.DateFormat.yMd();
+      shortDateFormat = intl.DateFormat.yMMMd();
+      mediumDateFormat = intl.DateFormat.MMMEd();
+      longDateFormat = intl.DateFormat.yMMMMEEEEd();
+      yearMonthFormat = intl.DateFormat.yMMMM();
+      shortMonthDayFormat = intl.DateFormat.MMMd();
+    }
+
+    if (intl.NumberFormat.localeExists('ar')) {
+      decimalFormat = intl.NumberFormat.decimalPattern('ar');
+      twoDigitZeroPaddedFormat = intl.NumberFormat('00', 'ar');
+    } else {
+      decimalFormat = intl.NumberFormat.decimalPattern();
+      twoDigitZeroPaddedFormat = intl.NumberFormat('00');
+    }
+
+    return KurdishMaterialLocalizations(
+      fullYearFormat: fullYearFormat,
+      compactDateFormat: compactDateFormat,
+      shortDateFormat: shortDateFormat,
+      mediumDateFormat: mediumDateFormat,
+      longDateFormat: longDateFormat,
+      yearMonthFormat: yearMonthFormat,
+      shortMonthDayFormat: shortMonthDayFormat,
+      decimalFormat: decimalFormat,
+      twoDigitZeroPaddedFormat: twoDigitZeroPaddedFormat,
     );
   }
 

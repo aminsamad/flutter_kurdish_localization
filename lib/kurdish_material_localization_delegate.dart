@@ -70,16 +70,18 @@ class _KurdishMaterialLocalizationsDelegate
       twoDigitZeroPaddedFormat = intl.NumberFormat('00');
     }
 
-    return KurdishMaterialLocalizations(
-      fullYearFormat: fullYearFormat,
-      compactDateFormat: compactDateFormat,
-      shortDateFormat: shortDateFormat,
-      mediumDateFormat: mediumDateFormat,
-      longDateFormat: longDateFormat,
-      yearMonthFormat: yearMonthFormat,
-      shortMonthDayFormat: shortMonthDayFormat,
-      decimalFormat: decimalFormat,
-      twoDigitZeroPaddedFormat: twoDigitZeroPaddedFormat,
+    return SynchronousFuture<MaterialLocalizations>(
+      KurdishMaterialLocalizations(
+        fullYearFormat: fullYearFormat,
+        compactDateFormat: compactDateFormat,
+        shortDateFormat: shortDateFormat,
+        mediumDateFormat: mediumDateFormat,
+        longDateFormat: longDateFormat,
+        yearMonthFormat: yearMonthFormat,
+        shortMonthDayFormat: shortMonthDayFormat,
+        decimalFormat: decimalFormat,
+        twoDigitZeroPaddedFormat: twoDigitZeroPaddedFormat,
+      ),
     );
   }
 

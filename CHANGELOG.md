@@ -65,3 +65,10 @@
 * Fixed issues and updated the package.
 * Raise minimum Flutter SDK to 3.38.0 (latest stable) to align with the current toolchain and pass plugin validation.
 * Update Dart SDK constraint accordingly.
+
+## 1.1.4
+* Internal adjustments.
+
+## 1.1.5
+* Convert package to pure Dart (remove unused plugin registration) to fix missing platform main-class errors.
+* Keep Flutter minimum at 3.38.0 and Dart 3.10.8.

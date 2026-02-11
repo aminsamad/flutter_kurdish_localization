@@ -1,0 +1,21 @@
+{
+    "select_language": "Select Language",
+    "desc": "Central Kurdish Localization in easy steps, simple ways to localize and translate your app to Central Kurdish.",
+    "home_page": "Home Page",
+    "ok_button": "Ok",
+    "name": "Name",
+    "name_hint": "Enter your name",
+    "email": "Email",
+    "email_hint": "Enter your email",
+    "date_of_birth": "Date of Birth",
+    "required_field": "Required Field",
+    "submit_info": "Submit Info",
+    "settings": "Settings",
+    "change_language": "Change Language",
+    "pick_date": "Pick Date",
+    "select_time": "Select Time",
+    "time": "Time",
+    "rm_shared": "Remove (Shared Preferences from Landing screen)",
+    "delete": "Delete",
+    "deleted": "Deleted"
+}
